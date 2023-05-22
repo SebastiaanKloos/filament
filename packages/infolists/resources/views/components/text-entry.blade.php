@@ -98,8 +98,8 @@
                                 default => $size,
                             } : match ($size = ($isBadge ? 'sm' : $getSize($state))) {
                                 'xs' => 'text-xs',
-                                'sm' => 'text-sm',
-                                'base', 'md', null => 'text-base',
+                                'sm', null => 'text-sm',
+                                'base', 'md' => 'text-base',
                                 'lg' => 'text-lg',
                                 default => $size,
                             }),

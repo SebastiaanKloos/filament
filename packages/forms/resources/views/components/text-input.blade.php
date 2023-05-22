@@ -41,8 +41,8 @@
                 x-data="{}"
             @endif
             x-bind:class="{
-                'border-gray-300 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:focus:border-primary-500': ! (@js($statePath) in $wire.__instance.serverMemo.errors),
-                'border-danger-600 ring-danger-600 dark:border-danger-400 dark:ring-danger-400': (@js($statePath) in $wire.__instance.serverMemo.errors),
+                'ring-gray-300 focus:ring-primary-500 dark:ring-gray-600 dark:focus:ring-primary-500': ! (@js($statePath) in $wire.__instance.serverMemo.errors),
+                'ring-danger-600 dark:ring-danger-400': (@js($statePath) in $wire.__instance.serverMemo.errors),
             }"
             {{
                 $getExtraInputAttributeBag()
@@ -68,9 +68,9 @@
                         $applyStateBindingModifiers('wire:model') => (! $hasMask) ? $statePath : null,
                     ], escape: false)
                     ->class([
-                        'filament-forms-input block w-full transition duration-75 shadow-sm outline-none sm:text-sm focus:relative focus:z-[1] focus:ring-1 focus:ring-inset disabled:opacity-70 dark:bg-gray-700 dark:text-white',
-                        'rounded-s-lg' => ! ($prefixLabel || $prefixIcon),
-                        'rounded-e-lg' => ! ($suffixLabel || $suffixIcon),
+                        'filament-forms-input h-9 ring-1 ring-inset border-none block w-full transition duration-75 shadow-sm outline-none sm:text-sm focus:relative focus:z-[1] focus:ring-2 focus:ring-inset disabled:opacity-70 dark:bg-gray-700 dark:text-white',
+                        'rounded-s-md' => ! ($prefixLabel || $prefixIcon),
+                        'rounded-e-md' => ! ($suffixLabel || $suffixIcon),
                     ])
             }}
         />
